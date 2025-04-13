@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Questrial&display=swap');
 
 body {
@@ -83,5 +84,4 @@ form .pied-formulaire button:hover {
 @media screen and (max-width:920px) {
   form .corps-formulaire .droite {
   margin-left: 0px;
-}
 }
