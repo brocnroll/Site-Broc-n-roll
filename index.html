@@ -13,6 +13,20 @@
   (function(){
     emailjs.init("vHWhtLlDCx6yiZtMD"); 
   })();
+
+  document.getElementById('form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var formElement = this;
+      
+      emailjs.sendForm('service_3l08cr5', 'template_f8ap0hw', formElement)
+        .then(function(response) {
+          console.log('Success:', response);
+          document.getElementById('confirmation-message').innerHTML = '<p class="success">Message envoyé avec succès !</p>';
+        }, function(error) {
+          console.error('Erreur:', error);
+          document.getElementById('confirmation-message').innerHTML = '<p class="error">Une erreur s’est produite : ' + error.text + '</p>';
+        });
+    });
 </script>
 
 </head>
