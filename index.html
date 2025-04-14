@@ -9,29 +9,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 
-<script>
-  (function(){
-    emailjs.init("vHWhtLlDCx6yiZtMD"); 
-  })();
-
-  document.getElementById('form').addEventListener('submit', function(e) {
-    e.preventDefault();
-
-    emailjs.sendForm('service_3l08cr5', 'template_f8ap0hw', this)
-      .then(function(response) {
-        console.log('Success:', response);
-       
-        document.getElementById("confirmationMessage").innerHTML = "Merci, votre message a bien été envoyé !";
-        document.getElementById("confirmationMessage").style.color = "green"; // Message en vert
-      }, function(error) {
-        console.error('Erreur:', error);
-      
-        document.getElementById("confirmationMessage").innerHTML = "Une erreur s’est produite: " + error.text;
-        document.getElementById("confirmationMessage").style.color = "red"; // Message en rouge
-      });
-  });
-</script>
-
 </head>
 
 <body>
