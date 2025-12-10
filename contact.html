@@ -6,25 +6,27 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
   <link rel="stylesheet" href="style.css"> 
 </head>
-<body>
+
+<body class="page-contact"> <!-- ICI la classe manquante -->
 
   <!-- NAVBAR -->
-   <nav class='navbar'>
+  <nav class="navbar">
     <a href="index.html" class="logo">Broc'n'roll</a>
-    
-<div class="menu-hamburger">
-  <i class="fa fa-bars"></i>
-</div>
-    
+
+    <div class="menu-hamburger">
+      <i class="fa fa-bars"></i>
+    </div>
+
     <div class="nav-links">
       <ul>
-        <li class="active"><a href="index.html">Accueil</a></li>
+        <li><a href="index.html">Accueil</a></li>
         <li><a href="#">Nos prestations</a></li>
-        <li><a href="#">Nos boutiques</a></li> 
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#">Nos boutiques</a></li>
+        <li class="active"><a href="contact.html">Contact</a></li>
       </ul>
-   </div>
+    </div>
   </nav>
+
   <!-- FORMULAIRE -->
   <section class="page-contact">
     <h1>Contactez-nous</h1>
@@ -36,25 +38,27 @@
           <label>Nom</label>
           <input type="text" name="user_name" placeholder="Votre nom" required>
         </div>
+
         <div class="groupe">
           <label>Email</label>
           <input type="email" name="user_email" placeholder="Votre email" required>
         </div>
+
         <div class="groupe full-width">
           <label>Message</label>
           <textarea name="message" placeholder="Votre message" required></textarea>
         </div>
       </div>
+
       <div class="pied-formulaire">
         <button type="submit">Envoyer</button>
         <p id="confirmationMessage"></p>
       </div>
     </form>
   </section>
-</body>
-  
-  <!-- SCRIPT -->
+
+  <!-- SCRIPT (doit être dans le BODY !) -->
   <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
   <script src="script.js"></script>
-
+</body>
 </html>
