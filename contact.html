@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <title>Contact</title> 
-  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
-  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <link rel="stylesheet" href="style.css"> 
 </head>
-<body>
+<body class="page-contact">
 
+  <!-- NAVBAR -->
   <nav class='navbar'>
     <a href="index.html" class="logo">Broc'n'roll</a>
     <div class="nav-links">
@@ -20,9 +20,10 @@
         <li class="active"><a href="contact.html">Contact</a></li>
       </ul>
     </div>
-    <div class="menu-hamburger"><i class="fa fa-bars"></i></div>
+    <div class="menu-hamburger"><i class="fa fa-bars" style="color:white;"></i></div>
   </nav>
 
+  <!-- FORMULAIRE -->
   <section class="page-contact">
     <h1>Contactez-nous</h1>
     <p>Remplissez le formulaire ci-dessous pour nous envoyer un message.</p>
@@ -30,16 +31,16 @@
     <form id="form">
       <div class="corps-formulaire">
         <div class="groupe">
-          <label for="name">Nom</label>
-          <input type="text" id="name" name="user_name" placeholder="Votre nom" required>
+          <label>Nom</label>
+          <input type="text" name="user_name" placeholder="Votre nom" required>
         </div>
         <div class="groupe">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="user_email" placeholder="Votre email" required>
+          <label>Email</label>
+          <input type="email" name="user_email" placeholder="Votre email" required>
         </div>
         <div class="groupe full-width">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" placeholder="Votre message" required></textarea>
+          <label>Message</label>
+          <textarea name="message" placeholder="Votre message" required></textarea>
         </div>
       </div>
       <div class="pied-formulaire">
@@ -49,36 +50,8 @@
     </form>
   </section>
 
-  <footer>
-    <p>&copy; 2025 Broc'n'roll - Tous droits réservés</p>
-    <p>📍Châteauneuf-sur-Cher | 📞 06 XX XX XX XX | ✉ contact@brocnroll.fr</p>
-  </footer>
-
-  <script>
-    const menuHamburger = document.querySelector(".menu-hamburger");
-    const navLinks = document.querySelector(".nav-links");
-    menuHamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('mobile-menu');
-    });
-
-    (function(){
-      emailjs.init("vHWhtLlDCx6yiZtMD"); 
-    })();
-
-    document.getElementById('form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      emailjs.sendForm('service_3l08cr5', 'template_f8ap0hw', this)
-        .then(function(response) {
-          document.getElementById("confirmationMessage").innerHTML = "Merci, votre message a bien été envoyé !";
-          document.getElementById("confirmationMessage").style.color = "green";
-        }, function(error) {
-          document.getElementById("confirmationMessage").innerHTML = "Une erreur s’est produite: " + error.text;
-          document.getElementById("confirmationMessage").style.color = "red";
-        });
-    });
-  </script>
-
+  <!-- SCRIPT -->
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
   <script src="script.js"></script>
-  
 </body>
 </html>
