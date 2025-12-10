@@ -205,6 +205,19 @@ footer {
   .nav-links ul li {
     margin: 20px 0;
   }
+ .page-contact {
+    max-width: 95%;      /* prend presque toute la largeur */
+    margin: 100px auto 20px; /* réduit l’espace en haut */
+    padding: 15px;
+  }
 
-  
+  .corps-formulaire .groupe {
+    margin-bottom: 15px;
+  }
+
+  .pied-formulaire button {
+    width: 100%;        /* bouton plein largeur sur mobile */
+    padding: 12px 0;
+  }
 }
+
