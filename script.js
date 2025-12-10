@@ -1,6 +1,9 @@
 // script.js
 console.log("Le JS fonctionne !");
 
+(function(){
+    emailjs.init("brocnroll18@gmail.com"); 
+    })();
 // Exemple pour le formulaire contact
 const form = document.getElementById('form');
 const confirmationMessage = document.getElementById('confirmationMessage');
