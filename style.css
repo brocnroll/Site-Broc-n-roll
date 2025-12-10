@@ -59,9 +59,11 @@ body {
 
 .menu-hamburger {
   display: none;
-  font-size: 1.8em;
+  font-size: 2em;
   color: white;
   cursor: pointer;
+  z-index: 200; /* au-dessus de la navbar */
+  position: relative;
 }
 
 /* Hero accueil */
