@@ -117,12 +117,15 @@ body {
 
 /* ================== EN-TÊTE CONTACT ================== */
 .contact-header {
-  background: linear-gradient(to right, #667eea 0%, #764ba2 100%);
-  color: white;
-  padding: 40px 30px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  box-shadow: 0 5px 20px rgba(102, 126, 234, 0.3);
+  
+  background-color: rgba(0, 0, 0, 0.5); /* noir transparent à 50% */
+  color: white;                        /* texte blanc */
+  padding: 15px 20px;                  /* espace autour du texte */
+  border-radius: 10px;                 /* coins arrondis */
+  line-height: 1.6;                    /* espace entre les lignes */
+  max-width: 600px;                    /* limite la largeur */
+  margin: 0 auto 30px;                 /* centre le bloc et espace en bas */
+  text-align: center;                  /* texte centré */
 }
 
 .contact-form-wrapper {
