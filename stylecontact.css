@@ -16,7 +16,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;      /* prend toute la hauteur de la fenêtre */
-  background-image: url('Image/3.jpg');
+  background-image: url('Image/1.jpg');
   background-size: cover;
   background-position: bottom 25%;
   background-repeat: no-repeat;
