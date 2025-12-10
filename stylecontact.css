@@ -149,7 +149,7 @@ body {
   background-color: #222;   /* gris foncé comme la navbar */
   color: white;
   text-align: center;       /* texte centré horizontalement */
-  padding: 20px 0; 
+  padding: 20px 10px; 
   width: 100%;
 /* ================== RESPONSIVE ================== */
 @media screen and (max-width: 920px) {
