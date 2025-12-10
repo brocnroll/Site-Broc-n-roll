@@ -99,18 +99,24 @@
       
       /* Page contact responsive */
       body {
-        background-position: center !important;
+        background-position: center top !important; /* Image collée en haut */
+        padding-top: 0 !important; /* Supprime le padding du dynamic island */
       }
       
       .page-contact {
         padding-top: 120px !important;
-        max-width: 85% !important; /* Réduit de 95% à 85% pour voir plus de fond */
-        margin: 0 auto !important;
+        max-width: 85% !important;
+        margin: 0 auto 30px auto !important;
+        background-color: transparent !important; /* Enlève le fond blanc */
+        box-shadow: none !important; /* Enlève l'ombre globale */
       }
       
+      /* Header séparé avec son propre style */
       .contact-header {
         padding: 25px 15px !important;
-        margin: -15px -15px 0 -15px !important;
+        margin: 0 0 20px 0 !important; /* Marge en bas pour séparer */
+        border-radius: 10px !important; /* Coins arrondis partout */
+        box-shadow: 0 5px 20px rgba(0,0,0,0.5) !important;
       }
       
       .contact-header h1 {
@@ -121,9 +127,12 @@
         font-size: 0.95rem !important;
       }
       
+      /* Formulaire séparé */
       .contact-form-wrapper {
-        padding: 15px 12px !important; /* Padding réduit */
-        margin: 0 -15px 20px -15px !important;
+        padding: 15px 12px !important;
+        margin: 0 !important; /* Plus de marge négative */
+        border-radius: 10px !important; /* Coins arrondis partout */
+        box-shadow: 0 5px 20px rgba(0,0,0,0.5) !important;
       }
       
       .corps-formulaire .groupe {
