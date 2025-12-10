@@ -10,12 +10,21 @@
   font-family: "Montserrat", sans-serif;
 }
 
+html, body {
+  height: 100%;             /* nécessaire pour le flex */
+  margin: 0;
+}
+
 body {
   background-image: url('Image/3.jpg');
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+}
+
+.content {
+  flex: 1;                  /* prend tout l'espace restant */
 }
 
 /* ================== NAVBAR ================== */
