@@ -79,7 +79,7 @@ body {
 
 /* ================== EN-TÊTE CONTACT ================== */
 .contact-header {
-  
+  background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
   color: white;
   padding: 40px 30px;
   border-radius: 10px 10px 0 0;
