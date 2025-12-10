@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" style="background: url('Image/3.jpg') center / cover no-repeat fixed; margin: 0; padding: 0; height: 100%; overflow: hidden;">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
@@ -9,19 +9,27 @@
   
   <!-- CSS DE SECOURS INLINE -->
   <style>
-    /* FIX pour l'encoche iPhone et fond */
+    /* FIX ABSOLU pour Dynamic Island et fond blanc */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
     html {
-      padding: 0 !important;
-      margin: 0 !important;
-      background-image: inherit !important; /* Hérite de l'image du body */
-      background-size: cover !important;
-      background-position: center top !important;
+      background: url('Image/3.jpg') center / cover no-repeat fixed !important;
+      min-height: 100vh !important;
+      height: 100% !important;
+      overflow: hidden !important;
     }
     
     body {
-      padding: 0 !important;
+      background: transparent !important;
+      min-height: 100vh !important;
+      height: 100% !important;
+      overflow: hidden !important;
       margin: 0 !important;
-      background-color: transparent !important;
+      padding: 0 !important;
     }
     
     .pied-formulaire {
