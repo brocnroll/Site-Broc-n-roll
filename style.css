@@ -119,7 +119,7 @@ body {
 /* Conteneur entier de la page contact avec image */
 .contact-page-wrapper {
   min-height: 100vh; /* prend toute la hauteur de la page */
-  background-image: url('Image/nom-de-ton-image.jpg');
+  background-image: url('3.jpg');
   background-size: cover;          /* couvre tout l’espace */
   background-position: center;     /* centre l’image */
   background-repeat: no-repeat;
