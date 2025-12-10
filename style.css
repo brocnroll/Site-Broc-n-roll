@@ -116,23 +116,47 @@ body {
 /* ================== PAGE CONTACT ================== */
 
 /* ================== EN-TÊTE CONTACT ================== */
-.contact-header {
-  
-  background-image: url('Image/3.jpg');
+/* Conteneur de toute la page contact */
+.contact-page-wrapper {
+  background-image: url('Image/nom-de-ton-image.jpg'); /* ton image */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-color: rgba(0, 0, 0, 0.5); /* noir transparent à 50% */
-  color: white;                        /* texte blanc */
-  padding: 15px 20px;                  /* espace autour du texte */
-  border-radius: 10px;                 /* coins arrondis */
-  line-height: 1.6;                    /* espace entre les lignes */
-  max-width: 600px;                    /* limite la largeur */
-  margin: 0 auto 30px;                 /* centre le bloc et espace en bas */
-  text-align: center;                  /* texte centré */
+  position: relative;
 }
 
+/* Overlay noir léger */
+.contact-page-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.4);
+  z-index: 0;
+}
+
+/* Contenu au-dessus de l’overlay */
+.page-contact, 
+.contact-header, 
+.contact-form-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+/* Titre */
+.contact-header {
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  padding: 15px 20px;
+  border-radius: 10px;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto 30px;
+  text-align: center;
+}
+
+/* Formulaire */
 .contact-form-wrapper {
   background-color: white;
   padding: 30px;
