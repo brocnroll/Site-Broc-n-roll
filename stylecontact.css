@@ -11,7 +11,7 @@
 }
 
 body {
- background-image: url('chemin/vers/3.jpg'); /* met ton image ici */
+  background-image: url('3.jpg'); /* met ton image ici */
   background-size: cover;       /* l'image couvre tout l'écran */
   background-position: center;  /* centrée */
   background-repeat: no-repeat; /* pas de répétition */
