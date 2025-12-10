@@ -113,80 +113,6 @@ body {
   text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
 }
 
-/* ================== PAGE CONTACT ================== */
-. lapage {
-   background-image: url('Image/3.jpg');
-  
-.contact-header {
-  background: linear-gradient(to right, #667eea 0%, #764ba2 100%);
-  color: white;
-  padding: 40px 30px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  box-shadow: 0 5px 20px rgba(102, 126, 234, 0.3);
-}
-
-.contact-form-wrapper {
-  background-color: white;
-  padding: 30px;
-  border-radius: 10px;
-  border: 2px solid #e0e0e0;
-}
-
-/* ================== ZONE FORMULAIRE ================== */
-.contact-form-wrapper {
-  background-color: #f9f9f9;
-  padding: 30px;
-  border-radius: 0 0 10px 10px;
-  margin: 0 -20px -20px -20px;
-}
-
-.corps-formulaire .groupe {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 20px;
-}
-
-.corps-formulaire input,
-.corps-formulaire textarea {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 1rem;
-}
-
-.corps-formulaire textarea {
-  min-height: 120px;
-  resize: vertical;
-}
-
-.pied-formulaire {
-  text-align: center;
-}
-
-.pied-formulaire button {
-  background-color: orange;
-  color: white;
-  border: none;
-  padding: 10px 25px;
-  font-size: 1rem;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: transform 0.3s;
-}
-
-.pied-formulaire button:hover {
-  transform: scale(1.05);
-}
-
-/* ================== FOOTER ================== */
-footer {
-  background-color: #222;
-  color: white;
-  text-align: center;
-  padding: 20px 10px;
-}
-
 /* ================== RESPONSIVE ================== */
 @media screen and (max-width: 920px) {
 
@@ -223,33 +149,4 @@ footer {
     margin: 20px 0;
   }
 
-  /* Page contact responsive */
-  .page-contact {
-    max-width: 95%;
-    margin: 100px auto 20px;
-    padding: 15px;
-  }
-  
-  .contact-header {
-    padding: 30px 20px;
-    margin: -15px -15px 0 -15px;
-  }
-  
-  .contact-header h1 {
-    font-size: 2rem;
-  }
-  
-  .contact-form-wrapper {
-    padding: 20px;
-    margin: 0 -15px -15px -15px;
-  }
-
-  .corps-formulaire .groupe {
-    margin-bottom: 15px;
-  }
-
-  .pied-formulaire button {
-    width: 100%;
-    padding: 12px 0;
-  }
-}
+ 
