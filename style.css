@@ -84,7 +84,6 @@ body {
   align-items: center;
   color: white;
   text-align: center;
-  padding: 0 20px;
   position: relative;
   z-index: 1;
 }
@@ -97,20 +96,21 @@ body {
   z-index: 0;
 }
 
+.hero h1, .hero p {
+  position: relative;
+  z-index: 2; /* texte au-dessus du fond */
+}
+
 .hero h1 {
   font-size: 3rem;
   margin-bottom: 20px;
   text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
-  position: relative;
-  z-index: 2;
 }
 
 .hero p {
   font-size: 1.2rem;
   max-width: 600px;
   text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
-  position: relative;
-  z-index: 2;
 }
 
 /* ================== PAGE CONTACT ================== */
@@ -183,11 +183,13 @@ footer {
 
 /* ================== RESPONSIVE (mobile) ================== */
 @media screen and (max-width: 920px) {
+
+  /* Hamburger menu */
   .menu-hamburger {
     display: block;
   }
 
-  /* Global nav-links pour toutes les pages */
+  /* Menu global pour toutes les pages en mobile */
   .nav-links {
     display: none;
     position: fixed;
@@ -206,7 +208,7 @@ footer {
     display: flex;
   }
 
-  /* ⚡ Spécifique page-contact seulement */
+  /* ⚡ Menu hamburger spécifique page-contact */
   .page-contact .nav-links ul {
     flex-direction: column !important;
     align-items: center;
@@ -216,7 +218,7 @@ footer {
     margin: 20px 0;
   }
 
-  /* Formulaire responsive */
+  /* Page contact responsive */
   .page-contact {
     max-width: 95%;
     margin: 100px auto 20px;
