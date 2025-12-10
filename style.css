@@ -114,26 +114,27 @@ body {
 }
 
 /* ================== PAGE CONTACT ================== */
-.page-contact {
-  max-width: 800px;
-  margin: 0 auto 50px;
-  margin-top: calc(80px + 40px + env(safe-area-inset-top));
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0px 2px 10px rgba(0,0,0,0.1);
+.contact-container {
+  max-width: 800px; /* largeur maximale du formulaire */
+  margin: 0 auto 50px; /* centré horizontalement avec marge en bas */
+  margin-top: calc(80px + 40px + env(safe-area-inset-top)); /* marge en haut avec safe area */
+  padding: 20px; /* espacement intérieur */
+  background-color: #fff; /* couleur de fond blanche */
+  border-radius: 10px; /* coins arrondis */
+  box-shadow: 0px 2px 10px rgba(0,0,0,0.1); /* ombre portée */
+  position: relative; /* pour gérer le layering si besoin */
+  z-index: 1;
 }
 
-/* ================== EN-TÊTE CONTACT ================== */
+/* ================== EN-TÊTE CONTACT (TOUTE LA PAGE) ================== */
 .contact-header {
- width: 100%; /* prend toute la largeur de la page */
-  max-width: none; /* ignore la limite de 800px */
+  width: 100%; /* prend toute la largeur de la page */
   background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
   color: white;
   padding: 40px 30px;
   text-align: center;
-  border-radius: 0; /* pas de coins arrondis si tu veux un rectangle complet */
-  margin: 0; /* pas de marge qui limite la largeur */
+  border-radius: 0; /* rectangle complet */
+  margin: 0; /* pas de marge */
 }
 
 .contact-header h1 {
