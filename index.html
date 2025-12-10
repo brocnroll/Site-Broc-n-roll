@@ -1,96 +1,43 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta charset="UTF-8">
   <title>Broc'n'roll</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
 </head>
 <body>
-  
-<nav class='navbar'>
-  <a href="#" class="logo">Broc'n'roll</a>
-  <div class="nav-links">
-    <ul>
-      <li class="active"><a href="index.html">Accueil</a></li>
-      <li><a href="#">Nos prestations</a></li>
-      <li><a href="#">Nos boutiques</a></li>
-      <li><a href="#">Nos réseaux</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </div>
-  <div class="menu-hamburger"><i class="fa fa-bars"aria-hidden="true" style="color: white;"></i></div>
-  
-</nav>
-  <!-- HERO -->
-<header>
-  <div class="hero-text">
-    <h1>Bienvenue chez Broc'n'Roll</h1>
-    <p>La brocante qui redonne vie à vos trésors à Châteauneuf-sur-Cher</p>
-    <a href="contact.html" class="btn">Nous contacter</a>
-  </div>
-</header>
 
-<!-- À PROPOS -->
-<section class="about">
-  <div class="about-container">
-    <div class="about-text">
-      <h2>Qui sommes-nous ?</h2>
-      <p>Broc'n'Roll est une brocante unique à Châteauneuf-sur-Cher. Nous récupérons, restaurons et vendons des objets uniques, pour que chacun puisse trouver son trésor.</p>
+  <nav class='navbar'>
+    <a href="index.html" class="logo">Broc'n'roll</a>
+    <div class="nav-links">
+      <ul>
+        <li class="active"><a href="index.html">Accueil</a></li>
+        <li><a href="#">Nos prestations</a></li>
+        <li><a href="#">Nos boutiques</a></li>
+        <li><a href="#">Nos réseaux</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </div>
-    <div class="about-img">
-      <img src="Image/about.jpg" alt="Boutique Broc'n'Roll">
-    </div>
-  </div>
-</section>
+    <div class="menu-hamburger"><i class="fa fa-bars"></i></div>
+  </nav>
 
-<!-- PRESTATIONS -->
-<section class="services">
-  <h2>Nos prestations</h2>
-  <div class="services-container">
-    <div class="service">
-      <i class="fas fa-box-open fa-3x"></i>
-      <h3>Débarras</h3>
-      <p>Nous débarrassons vos maisons et appartements rapidement et efficacement.</p>
-    </div>
-    <div class="service">
-      <i class="fas fa-couch fa-3x"></i>
-      <h3>Vente d’objets</h3>
-      <p>Des objets uniques, restaurés et prêts à trouver une nouvelle maison.</p>
-    </div>
-    <div class="service">
-      <i class="fas fa-hand-holding-heart fa-3x"></i>
-      <h3>Restauration</h3>
-      <p>Nous redonnons vie à vos meubles et objets anciens avec soin.</p>
-    </div>
-  </div>
-</section>
+  <section class="hero">
+    <h1>Bienvenue chez Broc'n'roll</h1>
+    <p>Découvrez nos boutiques, nos objets uniques et nos prestations sur mesure pour tous vos besoins.</p>
+  </section>
 
-<section class="hero">
-  <img src="Image/hero.jpg" alt="Brocante Broc'n'Roll" class="hero-img">
-  <div class="hero-text">
-    <h1>Bienvenue chez Broc'n'Roll</h1>
-    <p>La brocante qui redonne vie à vos trésors à Châteauneuf-sur-Cher</p>
-    <a href="contact.html" class="btn">Nous contacter</a>
-  </div>
-</section>
+  <footer>
+    <p>&copy; 2025 Broc'n'roll - Tous droits réservés</p>
+    <p>📍Châteauneuf-sur-Cher | 📞 06 XX XX XX XX | ✉ contact@brocnroll.fr</p>
+  </footer>
 
- <footer>
-   <p>&copy; 2025 Broc'n'roll - Tous droits réservés</p>
-  <p>📍Châteauneuf-sur-Cher | 📞 06 XX XX XX XX | ✉ contact@brocnroll.fr</p>
-</footer>
-
-<script>
-const menuHamburger = document.querySelector(".menu-hamburger")
-const navLinks = document.querySelector(".nav-links")
-
-  menuHamburger.addEventListener('click',()=>{
-  navLinks.classList.toggle('mobile-menu')
-  });
+  <script>
+    const menuHamburger = document.querySelector(".menu-hamburger");
+    const navLinks = document.querySelector(".nav-links");
+    menuHamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('mobile-menu');
+    });
   </script>
-
 </body>
 </html>
