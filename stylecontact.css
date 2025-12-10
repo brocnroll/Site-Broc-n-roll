@@ -145,19 +145,11 @@ body {
 }
 
 /* ================== FOOTER ================== */
- .footer-bottom {
-  position: fixed;          /* fixe en bas */
-  bottom: 0;                /* tout en bas */
-  left: 0;                  /* aligné à gauche */
-  width: 100%;              /* toute la largeur */
-  background-color: #222;   /* gris foncé */
-  color: white;             /* texte blanc */
-  text-align: center;       /* texte centré */
-  padding: 20px 0;          /* padding vertical */
-  z-index: 100;             /* au-dessus du contenu */
-  box-shadow: 0 -2px 10px rgba(0,0,0,0.3); /* optionnel, un peu de relief */
-}
-
+ footer {
+  background-color: #222;   /* gris foncé comme la navbar */
+  color: white;
+  text-align: center;       /* texte centré horizontalement */
+  padding: 20px 0;   
 /* ================== RESPONSIVE ================== */
 @media screen and (max-width: 920px) {
 
