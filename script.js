@@ -1,13 +1,21 @@
-// script.js
 console.log("Le JS fonctionne !");
 
+// Initialisation EmailJS avec ta clé publique
 (function(){
     emailjs.init("veoKE_lETEjm945JK"); 
-    })();
-// Exemple pour le formulaire contact
+})();
+
 const form = document.getElementById('form');
 const confirmationMessage = document.getElementById('confirmationMessage');
 
+// Surlignage des champs quand actif
+const inputs = form.querySelectorAll('input, textarea');
+inputs.forEach(input => {
+  input.addEventListener('focus', () => input.style.borderColor = 'orange');
+  input.addEventListener('blur', () => input.style.borderColor = '#ccc');
+});
+
+// Envoi du formulaire
 form.addEventListener('submit', function(e) {
   e.preventDefault();
 
