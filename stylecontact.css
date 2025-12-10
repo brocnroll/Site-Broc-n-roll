@@ -87,13 +87,15 @@ body {
 
 /* ================== EN-TÊTE CONTACT ================== */
 .contact-header {
-  background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
+  background: rgba(0, 0, 0, 0.2);       /* noir transparent */
+  backdrop-filter: blur(4px);           /* effet verre froid */
+  -webkit-backdrop-filter: blur(4px);
   color: white;
   padding: 40px 30px;
   border-radius: 10px 10px 0 0;
   margin: -20px -20px 0 -20px;
   text-align: center;
-}
+  border-bottom: 1px solid rgba(255,255,255,0.15);
 
 .contact-header h1 {
   margin-bottom: 15px;
@@ -109,14 +111,14 @@ body {
 
 /* ================== ZONE FORMULAIRE ================== */
 .contact-form-wrapper {
-  background-color: rgba(0, 0, 0, 0.35);
+  background-color: rgba(0, 0, 0, 0.2);
   color: white;
   padding: 30px;
   border-radius: 10px;
   margin: 50px auto -400px auto;            /* centré horizontalement avec marge verticale */
   max-width: 600px;             /* largeur maximale du formulaire */
   box-shadow: 0 5px 20px rgba(0,0,0,0.4); /* ombre pour détacher du fond */
-  backdrop-filter: blur(6px);    transparence
+  backdrop-filter: blur(4px);    transparence
 }
 
 .corps-formulaire .groupe {
