@@ -20,7 +20,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   background-image: url('Image/3.jpg');
-  background-size: 90%;
+  background-size: 80%;
   background-position: 50% -300px;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -112,7 +112,7 @@ body {
   background-color: #f9f9f9;
   padding: 30px;
   border-radius: 10px;
-  margin: 100px auto -500px auto;            /* centré horizontalement avec marge verticale */
+  margin: 50px auto -400px auto;            /* centré horizontalement avec marge verticale */
   max-width: 600px;             /* largeur maximale du formulaire */
   box-shadow: 0 5px 20px rgba(0,0,0,0.2); /* ombre pour détacher du fond */
 }
