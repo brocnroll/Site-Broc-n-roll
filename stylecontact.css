@@ -142,6 +142,8 @@ footer {
   color: white;
   text-align: center;
   padding: 20px 10px;
+  width: 100%;              /* prend toute la largeur */
+  margin-top: auto;         /* clé pour "pousser" le footer en bas */
 }
 
 /* ================== RESPONSIVE ================== */
