@@ -16,6 +16,8 @@ html, body {
 }
 
 body {
+  display: flex;           /* flex vertical */
+  flex-direction: column;
   background-image: url('Image/3.jpg');
   background-size: cover;
   background-position: top center;
