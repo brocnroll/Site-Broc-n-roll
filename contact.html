@@ -85,7 +85,7 @@
         left: 0 !important;
         width: 100% !important;
         height: 100vh !important;
-        background-color: rgba(0, 0, 0, 0.6) !important; /* Plus transparent */
+        background-color: rgba(0, 0, 0, 0.7) !important; /* Plus foncé */
         backdrop-filter: blur(15px) saturate(180%) !important; /* Effet verre glacé */
         -webkit-backdrop-filter: blur(15px) saturate(180%) !important;
         flex-direction: column !important;
@@ -93,6 +93,18 @@
         align-items: center !important;
         z-index: 200 !important;
         border: 1px solid rgba(255, 255, 255, 0.1) !important; /* Bordure subtile */
+        animation: fadeIn 0.3s ease !important; /* Animation d'ouverture */
+      }
+      
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: scale(0.95);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
       }
       
       .nav-links.active {
@@ -106,10 +118,48 @@
       
       .nav-links ul li {
         margin: 20px 0 !important;
+        opacity: 0 !important;
+        animation: slideIn 0.4s ease forwards !important;
+      }
+      
+      .nav-links ul li:nth-child(1) { animation-delay: 0.1s !important; }
+      .nav-links ul li:nth-child(2) { animation-delay: 0.2s !important; }
+      .nav-links ul li:nth-child(3) { animation-delay: 0.3s !important; }
+      .nav-links ul li:nth-child(4) { animation-delay: 0.4s !important; }
+      
+      @keyframes slideIn {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
       
       .nav-links ul li a {
-        font-size: 1.5rem !important;
+        font-size: 1.8rem !important;
+        padding: 10px 30px !important;
+        border-radius: 10px !important;
+        transition: all 0.3s ease !important;
+        display: block !important;
+      }
+      
+      .nav-links ul li a:hover {
+        background-color: rgba(255, 140, 0, 0.2) !important;
+        transform: scale(1.1) !important;
+      }
+      
+      /* Icône hamburger qui devient X */
+      .menu-hamburger {
+        position: relative !important;
+        z-index: 300 !important;
+        transition: all 0.3s ease !important;
+      }
+      
+      .nav-links.active ~ .menu-hamburger {
+        transform: rotate(90deg) !important;
       }
       
       /* Page contact responsive */
