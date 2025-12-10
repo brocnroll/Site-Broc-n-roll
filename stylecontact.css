@@ -142,6 +142,12 @@ body {
   resize: vertical;
 }
 
+.corps-formulaire .groupe label {
+  margin-bottom: 8px;   /* augmente la valeur pour plus d'espace */
+  font-weight: 500;
+  color: white;
+}
+
 .pied-formulaire {
   text-align: center;
 }
