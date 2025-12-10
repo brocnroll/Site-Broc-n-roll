@@ -1,11 +1,11 @@
 // script.js
 
 // ---------- Menu Hamburger ----------
-const menuHamburger = document.querySelector(".menu-hamburger");
+const hamburger = document.querySelector(".menu-hamburger");
 const navLinks = document.querySelector(".nav-links");
 
-menuHamburger.addEventListener("click", () => {
-  navLinks.classList.toggle("mobile-menu");
+hamburger.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
 });
 // ---------- Formulaire Contact ----------
 (function(){
