@@ -2,7 +2,7 @@
 console.log("Le JS fonctionne !");
 
 (function(){
-    emailjs.init("brocnroll18@gmail.com"); 
+    emailjs.init("veoKE_lETEjm945JK"); 
     })();
 // Exemple pour le formulaire contact
 const form = document.getElementById('form');
