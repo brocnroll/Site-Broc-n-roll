@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Questrial&display=swap');
+re@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Questrial&display=swap');
 
 /* ================== RESET ================== */
 * {
@@ -22,7 +22,7 @@ body {
   min-height: 100vh;      /* prend toute la hauteur de la fenêtre */
   background-image: url('Image/3.jpg'); /* chemin vers ton image */
   background-size: cover;       /* couvre tout l'écran */
-  background-position: top 50%;  /* centrée */
+  background-position: top 10%;  /* centrée */
   background-repeat: no-repeat; /* pas de répétition */
   background-attachment: fixed; /* reste fixe quand tu scrolles */
 }
@@ -94,9 +94,9 @@ body {
   background-color: ;
   padding: 30px;
   border-radius: 10px; /* coins arrondis */
-  margin:  0 -20px 0 -20px;   /* ici tu ajoutes de l'espace autour */
+  margin:  0 -auto 20px auto;   /* ici tu ajoutes de l'espace autour */
   max-width: 800px;    /* largeur fixe pour le formulaire */
-  box-shadow: 0 5px 20px rgba(0,0,0,0.2); /* ombre pour le détacher visuellement */
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15); /* ombre pour le détacher visuellement */
 
 /* ================== ZONE FORMULAIRE ================== */
 .contact-form-wrapper {
