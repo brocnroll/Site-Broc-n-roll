@@ -114,10 +114,18 @@ body {
 }
 
 /* ================== PAGE CONTACT ================== */
+.page-contact {
+  max-width: 800px;
+  margin: 0 auto 50px;
+  margin-top: calc(80px + 40px + env(safe-area-inset-top));
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 2px 10px rgba(0,0,0,0.1);
+}
 
 /* ================== EN-TÊTE CONTACT ================== */
 .contact-header {
-  background-image: url('Image/3.jpg');
   background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
   color: white;
   padding: 40px 30px;
@@ -137,24 +145,7 @@ body {
   font-size: 1.1rem;
   margin-bottom: 0;
 }
-/* Titre */
-.contact-header {
-  background-color: rgba(0,0,0,0.5);
-  color: white;
-  padding: 15px 20px;
-  border-radius: 10px;
-  line-height: 1.6;
-  max-width: 600px;
-  margin: 0 auto 30px;
-  text-align: center;
-}
 
-/* Formulaire */
-.contact-form-wrapper {
-  background-color: white;
-  padding: 30px;
-  border-radius: 10px;
-  border: 2px solid #e0e0e0;
 /* ================== ZONE FORMULAIRE ================== */
 .contact-form-wrapper {
   background-color: #f9f9f9;
@@ -208,6 +199,7 @@ footer {
   text-align: center;
   padding: 20px 10px;
 }
+
 /* ================== RESPONSIVE ================== */
 @media screen and (max-width: 920px) {
 
@@ -249,6 +241,20 @@ footer {
     max-width: 95%;
     margin: 100px auto 20px;
     padding: 15px;
+  }
+  
+  .contact-header {
+    padding: 30px 20px;
+    margin: -15px -15px 0 -15px;
+  }
+  
+  .contact-header h1 {
+    font-size: 2rem;
+  }
+  
+  .contact-form-wrapper {
+    padding: 20px;
+    margin: 0 -15px -15px -15px;
   }
 
   .corps-formulaire .groupe {
