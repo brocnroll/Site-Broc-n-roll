@@ -182,7 +182,7 @@ footer {
 }
 
 /* Responsive */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 920px) {
   .menu-hamburger {
     display: block;
   }
