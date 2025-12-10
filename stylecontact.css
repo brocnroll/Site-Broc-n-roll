@@ -109,14 +109,14 @@ body {
 
 /* ================== ZONE FORMULAIRE ================== */
 .contact-form-wrapper {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.35);
   color: white;
   padding: 30px;
   border-radius: 10px;
   margin: 50px auto -400px auto;            /* centré horizontalement avec marge verticale */
   max-width: 600px;             /* largeur maximale du formulaire */
-  box-shadow: 0 5px 20px rgba(0,0,0,0.2); /* ombre pour détacher du fond */
-  backdrop-filter: blur(10px);    transparence
+  box-shadow: 0 5px 20px rgba(0,0,0,0.4); /* ombre pour détacher du fond */
+  backdrop-filter: blur(6px);    transparence
 }
 
 .corps-formulaire .groupe {
