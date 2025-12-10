@@ -21,7 +21,7 @@ body {
   min-height: 100vh;
   background-image: url('Image/3.jpg');
   background-size: cover;
-  background-position: top center;
+  background-position: 50% -100px;
   background-repeat: no-repeat;
   background-attachment: fixed;
   margin: auto auto 50px auto;
