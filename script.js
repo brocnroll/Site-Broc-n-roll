@@ -8,7 +8,7 @@ const confirmationMessage = document.getElementById('confirmationMessage');
 form.addEventListener('submit', function(e) {
   e.preventDefault();
 
-  emailjs.sendForm('service__3l08cr5', 'template_f8ap0hw', this)
+  emailjs.sendForm('service_3l08cr5', 'template_f8ap0hw', this)
     .then(function(response) {
       confirmationMessage.innerHTML = "✅ Merci ! Votre message a bien été envoyé.";
       confirmationMessage.style.color = "green";
