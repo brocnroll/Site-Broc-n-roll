@@ -150,10 +150,13 @@ body {
 
 /* ================== FOOTER ================== */
 footer {
-  background-color: #222;
+
+  background-color: #222;  /* fond gris foncé comme la navbar */
   color: white;
-  text-align: center;
-  padding: 20px 10px;
+  text-align: center;      /* texte centré horizontalement */
+  padding: 20px 10px;      /* padding vertical et horizontal */
+  width: 100%;             /* occupe toute la largeur */
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.3); /* petit relief optionnel */
 }
 
 /* ================== RESPONSIVE ================== */
