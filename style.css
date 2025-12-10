@@ -116,23 +116,24 @@ body {
 /* ================== PAGE CONTACT ================== */
 
 /* ================== EN-TÊTE CONTACT ================== */
-/* Conteneur de toute la page contact */
+/* Conteneur entier de la page contact avec image */
 .contact-page-wrapper {
-  background-image: url('Image/nom-de-ton-image.jpg'); /* ton image */
-  background-size: cover;
-  background-position: center;
+  min-height: 100vh; /* prend toute la hauteur de la page */
+  background-image: url('Image/nom-de-ton-image.jpg');
+  background-size: cover;          /* couvre tout l’espace */
+  background-position: center;     /* centre l’image */
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: fixed;    /* fixe quand on scroll */
   position: relative;
 }
 
-/* Overlay noir léger */
+/* Overlay noir léger sur toute la page */
 .contact-page-wrapper::before {
   content: "";
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgba(0,0,0,0.4); /* noir transparent */
   z-index: 0;
 }
 
