@@ -12,7 +12,12 @@
 body {
   background-color: #f5f5f5;
   color: #333;
-  padding-top: env(safe-area-inset-top); /* décalage automatique pour l'encoche */}
+  padding-top: env(safe-area-inset-top); /* décalage automatique pour l'encoche */
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+  padding-bottom: env(safe-area-inset-bottom);
+  margin: 0;
+}
 
 
 /* Navbar */
@@ -20,6 +25,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: calc(20px + env(safe-area-inset-top));
   padding: 20px 50px;
   width: 100%;
   position: fixed;
@@ -70,8 +76,8 @@ body {
 
 /* Hero accueil */
 .hero {
-  height: 100dvh;
-  padding-top: env(safe-area-inset-top);
+  padding-top: calc(80px + env(safe-area-inset-top));
+  height: calc(100vh - env(safe-area-inset-top));
   width: 100%;
   background-image: url('Image/1.jpg');
   background-size: cover;
