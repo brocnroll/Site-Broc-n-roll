@@ -129,6 +129,9 @@ body {
 
 .corps-formulaire input,
 .corps-formulaire textarea {
+  border-color: orange;          /* Bordure orange */
+  outline: none;                 /* Enlève le contour moche noir */
+  box-shadow: 0 0 8px rgba(255, 165, 0, 0.6); /* Glow orange propre */
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
