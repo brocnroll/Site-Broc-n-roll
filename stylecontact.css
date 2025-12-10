@@ -109,7 +109,7 @@ body {
 
 /* ================== ZONE FORMULAIRE ================== */
 .contact-form-wrapper {
-  background-color: #f9f9f9;
+  background-color: rgba(0, 0, 0, 0.4);
   padding: 30px;
   border-radius: 10px;
   margin: 50px auto -400px auto;            /* centré horizontalement avec marge verticale */
