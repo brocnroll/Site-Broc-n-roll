@@ -8,10 +8,9 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-
 </head>
-
 <body>
+  
 <nav class='navbar'>
   <a href="#" class="logo">Broc'n'roll</a>
   <div class="nav-links">
@@ -23,25 +22,31 @@
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </div>
-  <li class="menu-hamburger"><i class="fa fa-bars"aria-hidden="true" style="color: white;"></i></li>
-  
+  <div class="menu-hamburger"><i class="fa fa-bars"aria-hidden="true" style="color: white;"></i></div>
 </nav>
-<header></header>
 
+<section class="hero">
+  <img src="Image/hero.jpg" alt="Brocante Broc'n'Roll" class="hero-img">
+  <div class="hero-text">
+    <h1>Bienvenue chez Broc'n'Roll</h1>
+    <p>La brocante qui redonne vie à vos trésors à Châteauneuf-sur-Cher</p>
+    <a href="contact.html" class="btn">Nous contacter</a>
+  </div>
+</section>
 
-
- 
+ <footer>
+   <p>&copy; 2025 Broc'n'roll - Tous droits réservés</p>
+  <p>📍Châteauneuf-sur-Cher | 📞 06 XX XX XX XX | ✉ contact@brocnroll.fr</p>
+</footer>
 
 <script>
-const menuHamburger = document.querySelector("menu-hamburger")
-  const navLinks = document.querySelector(".nav-links")
+const menuHamburger = document.querySelector(".menu-hamburger")
+const navLinks = document.querySelector(".nav-links")
 
   menuHamburger.addEventListener('click',()=>{
   navLinks.classList.toggle('mobile-menu')
-  })
+  });
   </script>
 
-<footer>
-  <p>&copy; 2025 Broc'n'roll - Tous droits réservés</p>
-</footer>
+</body>
 </html>
