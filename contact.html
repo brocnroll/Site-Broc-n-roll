@@ -3,13 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <title>Contact</title> 
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
   <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-  <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
 
-  <!-- Navbar -->
   <nav class='navbar'>
     <a href="index.html" class="logo">Broc'n'roll</a>
     <div class="nav-links">
@@ -21,10 +20,9 @@
         <li class="active"><a href="contact.html">Contact</a></li>
       </ul>
     </div>
-    <div class="menu-hamburger"><i class="fa fa-bars" style="color:white;"></i></div>
+    <div class="menu-hamburger"><i class="fa fa-bars"></i></div>
   </nav>
 
-  <!-- Formulaire -->
   <section class="page-contact">
     <h1>Contactez-nous</h1>
     <p>Remplissez le formulaire ci-dessous pour nous envoyer un message.</p>
@@ -51,13 +49,11 @@
     </form>
   </section>
 
-  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Broc'n'roll - Tous droits réservés</p>
     <p>📍Châteauneuf-sur-Cher | 📞 06 XX XX XX XX | ✉ contact@brocnroll.fr</p>
   </footer>
 
-  <!-- Scripts -->
   <script>
     const menuHamburger = document.querySelector(".menu-hamburger");
     const navLinks = document.querySelector(".nav-links");
@@ -80,3 +76,7 @@
           document.getElementById("confirmationMessage").style.color = "red";
         });
     });
+  </script>
+
+</body>
+</html>
