@@ -98,7 +98,7 @@ body {
 
 .hero h1, .hero p {
   position: relative;
-  z-index: 2; /* texte au-dessus du fond */
+  z-index: 2;
 }
 
 .hero h1 {
@@ -181,7 +181,7 @@ footer {
   padding: 20px 10px;
 }
 
-/* ================== RESPONSIVE (mobile) ================== */
+/* ================== RESPONSIVE ================== */
 @media screen and (max-width: 920px) {
 
   /* Hamburger menu */
@@ -189,32 +189,31 @@ footer {
     display: block;
   }
 
-  /* Menu global pour toutes les pages en mobile */
+  /* Menu mobile */
   .nav-links {
     display: none;
     position: fixed;
     top: 0;
     left: 0;
-    height: 100vh;
     width: 100%;
+    height: 100vh;
     background-color: rgba(0,0,0,0.9);
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: 150;
+    z-index: 200;
   }
 
   .nav-links.active {
     display: flex;
   }
 
-  /* ⚡ Menu hamburger spécifique page-contact */
-  .page-contact .nav-links ul {
-    flex-direction: column !important;
+  .nav-links ul {
+    flex-direction: column;
     align-items: center;
   }
 
-  .page-contact .nav-links ul li {
+  .nav-links ul li {
     margin: 20px 0;
   }
 
