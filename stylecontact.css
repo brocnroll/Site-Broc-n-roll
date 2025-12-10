@@ -145,15 +145,17 @@ body {
 }
 
 /* ================== FOOTER ================== */
-footer {
- background-color: #333;   /* gris foncé */
+ .footer-bottom {
+  position: fixed;          /* fixe en bas */
+  bottom: 0;                /* tout en bas */
+  left: 0;                  /* aligné à gauche */
+  width: 100%;              /* toute la largeur */
+  background-color: #222;   /* gris foncé */
   color: white;             /* texte blanc */
-  text-align: center;       /* centré */
-  padding: 40px 20px;       /* espace autour du texte */
-  max-width: 800px;         /* largeur maximale */
-  margin: 50px auto;        /* centré horizontalement et un peu de marge verticale */
-  border-radius: 10px;      /* coins arrondis optionnels */
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* optionnel, pour flotter un peu */
+  text-align: center;       /* texte centré */
+  padding: 20px 0;          /* padding vertical */
+  z-index: 100;             /* au-dessus du contenu */
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.3); /* optionnel, un peu de relief */
 }
 
 /* ================== RESPONSIVE ================== */
