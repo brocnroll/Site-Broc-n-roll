@@ -58,6 +58,15 @@
   </section>
 
   <!-- SCRIPTS -->
+  
+<script>
+    const menuHamburger = document.querySelector(".menu-hamburger");
+    const navLinks = document.querySelector(".nav-links");
+    menuHamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
+  
   <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
   <script src="script.js"></script>
 </body>
