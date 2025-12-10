@@ -186,17 +186,8 @@ footer {
   .menu-hamburger {
     display: block;
   }
-  
- .nav-links {
-    display: none;
-  }
 
-  .nav-links.active {
-    display: block;
-  }
-  
-  
-  .navbar .nav-links {
+  .nav-links {
     display: none;
     position: fixed;
     top: 0;
