@@ -9,9 +9,13 @@
   list-style: none;
   font-family: "Montserrat", sans-serif;
 }
-
 body {
-background-color: red;
+
+  background-image: url('3.jpg'); /* chemin vers ton image */
+  background-size: cover;       /* couvre tout l'écran */
+  background-position: center;  /* centrée */
+  background-repeat: no-repeat; /* pas de répétition */
+  background-attachment: fixed; /* reste fixe quand tu scrolles */
 }
 
 /* ================== NAVBAR ================== */
