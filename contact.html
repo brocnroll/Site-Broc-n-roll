@@ -9,6 +9,17 @@
   
   <!-- CSS DE SECOURS INLINE -->
   <style>
+    /* FIX pour l'encoche iPhone et fond */
+    html {
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+    
+    body {
+      padding: 0 !important; /* Enlève tout padding */
+      margin: 0 !important;
+    }
+    
     .pied-formulaire {
       text-align: center !important;
       margin-top: 20px !important;
@@ -98,24 +109,36 @@
       }
       
       /* Page contact responsive */
+      html, body {
+        padding: 0 !important;
+        margin: 0 !important;
+        background-color: transparent !important; /* Enlève le fond blanc */
+      }
+      
       body {
-        background-position: center top !important; /* Image collée en haut */
-        padding-top: 0 !important; /* Supprime le padding du dynamic island */
+        background-position: center top !important;
+        background-size: cover !important;
+        min-height: 100vh !important;
+      }
+      
+      .content {
+        background-color: transparent !important;
+        min-height: 100vh !important;
       }
       
       .page-contact {
-        padding-top: 120px !important;
+        padding-top: 100px !important; /* Réduit pour remonter le contenu */
         max-width: 85% !important;
         margin: 0 auto 30px auto !important;
-        background-color: transparent !important; /* Enlève le fond blanc */
-        box-shadow: none !important; /* Enlève l'ombre globale */
+        background-color: transparent !important;
+        box-shadow: none !important;
       }
       
-      /* Header séparé avec son propre style */
+      /* Header séparé avec plus d'espace */
       .contact-header {
         padding: 25px 15px !important;
-        margin: 0 0 20px 0 !important; /* Marge en bas pour séparer */
-        border-radius: 10px !important; /* Coins arrondis partout */
+        margin: 0 0 40px 0 !important; /* Plus d'espace : 40px au lieu de 20px */
+        border-radius: 10px !important;
         box-shadow: 0 5px 20px rgba(0,0,0,0.5) !important;
       }
       
@@ -144,10 +167,12 @@
         padding: 14px 0 !important;
       }
       
-      /* Footer centré sur mobile */
+      /* Footer transparent sur mobile */
       footer {
         text-align: center !important;
         padding: 20px 15px !important;
+        background-color: rgba(0, 0, 0, 0.6) !important; /* Garde la transparence */
+        margin-bottom: 0 !important;
       }
       
       footer p {
