@@ -117,7 +117,7 @@ body {
 
 /* ================== EN-TÊTE CONTACT ================== */
 .contact-header {
-  background-image: url('Image/3.jpg');
+  
   background: linear-gradient(to right, #667eea 0%, #764ba2 100%);
   color: white;
   padding: 40px 30px;
@@ -132,7 +132,6 @@ body {
   border-radius: 10px;
   border: 2px solid #e0e0e0;
 }
-
 
 /* ================== ZONE FORMULAIRE ================== */
 .contact-form-wrapper {
