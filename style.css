@@ -83,6 +83,7 @@ body {
   color: white;
   text-align: center;
   padding: 0 20px;
+  position: relative; z-index: 1;
 }
 
 .hero h1 {
@@ -95,6 +96,13 @@ body {
   font-size: 1.2rem;
   max-width: 600px;
   text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.5), transparent);
+  z-index: 0;
 }
 
 /* Page contact */
