@@ -71,7 +71,6 @@ body {
 /* Hero accueil */
 .hero {
   height: calc(100vh - 80px);
-  padding-top: env(safe-area-inset-top);
   width: 100%;
   background-image: url('Image/1.jpg');
   background-size: cover;
@@ -86,6 +85,14 @@ body {
   position: relative; z-index: 1;
 }
 
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.5), transparent);
+  z-index: 0;
+}
+
 .hero h1 {
   font-size: 3rem;
   margin-bottom: 20px;
@@ -97,13 +104,7 @@ body {
   max-width: 600px;
   text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
 }
-.hero::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.5), transparent);
-  z-index: 0;
-}
+
 
 /* Page contact */
 .page-contact {
