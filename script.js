@@ -1,15 +1,17 @@
 // script.js
 
 // ---------- Menu Hamburger ----------
-const hamburger = document.querySelector(".menu-hamburger");
+const menuHamburger = document.querySelector(".menu-hamburger");
 const navLinks = document.querySelector(".nav-links");
 
-hamburger.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
-});
+if (menuHamburger && navLinks) {
+  menuHamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+}
+
 // ---------- Formulaire Contact ----------
 (function(){
-    // Remplace par ton User ID EmailJS
     emailjs.init("veoKE_lETEjm945JK"); 
 })();
 
