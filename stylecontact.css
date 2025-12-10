@@ -21,7 +21,7 @@ body {
   min-height: 100vh;
   background-image: url('Image/3.jpg');
   background-size: cover;
-  background-position: 50% -200px;
+  background-position: 50% -150px;
   background-repeat: no-repeat;
   background-attachment: fixed;
   margin: auto auto 50px auto;
@@ -32,7 +32,7 @@ body {
 }
 
 .page-contact {
-  padding-top: 300px; /* augmente la valeur pour descendre plus */
+  padding-top: 275px; /* augmente la valeur pour descendre plus */
 }
 
 /* ================== NAVBAR ================== */
@@ -88,8 +88,8 @@ body {
 /* ================== EN-TÊTE CONTACT ================== */
 .contact-header {
   background: rgba(0, 0, 0, 0.2);       /* noir transparent */
-  backdrop-filter: blur(4px);           /* effet verre froid */
-  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(2px);           /* effet verre froid */
+  -webkit-backdrop-filter: blur(2px);
   color: white;
   padding: 40px 30px;
   border-radius: 10px 10px 0 0;
@@ -119,7 +119,7 @@ body {
   margin: 50px auto -400px auto;            /* centré horizontalement avec marge verticale */
   max-width: 600px;             /* largeur maximale du formulaire */
   box-shadow: 0 5px 20px rgba(0,0,0,0.4); /* ombre pour détacher du fond */
-  backdrop-filter: blur(4px);    transparence
+  backdrop-filter: blur(2px);    transparence
 }
 
 .corps-formulaire .groupe {
