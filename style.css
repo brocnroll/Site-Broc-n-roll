@@ -70,7 +70,7 @@ body {
 
 /* Hero accueil */
 .hero {
-  height: 100dvh;
+  height: calc(100vh - 80px);
   padding-top: env(safe-area-inset-top);
   width: 100%;
   background-image: url('Image/1.jpg');
