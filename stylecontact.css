@@ -32,7 +32,7 @@ body {
 }
 
 .page-contact {
-  padding-top: 150px; /* augmente la valeur pour descendre plus */
+  padding-top: 300px; /* augmente la valeur pour descendre plus */
 }
 
 /* ================== NAVBAR ================== */
@@ -112,7 +112,7 @@ body {
   background-color: #f9f9f9;
   padding: 30px;
   border-radius: 10px;
-  margin: 200px auto -500px auto;            /* centré horizontalement avec marge verticale */
+  margin: 100px auto -500px auto;            /* centré horizontalement avec marge verticale */
   max-width: 600px;             /* largeur maximale du formulaire */
   box-shadow: 0 5px 20px rgba(0,0,0,0.2); /* ombre pour détacher du fond */
 }
