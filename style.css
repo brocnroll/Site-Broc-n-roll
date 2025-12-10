@@ -114,24 +114,10 @@ body {
 }
 
 /* ================== PAGE CONTACT ================== */
-.page-contact {
-  padding-top: calc(80px + env(safe-area-inset-top));
-  height: calc(100vh - env(safe-area-inset-top));
-  width: 100%;
-  background-image: url('Image/3.jpg');
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  text-align: center;
-  position: relative;
-  z-index: 1;
-}
+
 /* ================== EN-TÊTE CONTACT ================== */
 .contact-header {
+  background-image: url('Image/3.jpg');
   background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
   color: white;
   padding: 40px 30px;
