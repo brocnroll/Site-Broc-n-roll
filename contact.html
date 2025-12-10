@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" style="background: url('Image/3.jpg') center / cover no-repeat fixed; margin: 0; padding: 0; height: 100%; overflow: hidden;">
+<html lang="fr" style="background: url('Image/3.jpg') center center / cover no-repeat; margin: 0; padding: 0; height: 100%; width: 100%; position: fixed; top: 0; left: 0;">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
@@ -9,7 +9,7 @@
   
   <!-- CSS DE SECOURS INLINE -->
   <style>
-    /* FIX ABSOLU pour Dynamic Island et fond blanc */
+    /* IMAGE FIXE SUR HTML = SOLUTION ULTIME */
     * {
       margin: 0;
       padding: 0;
@@ -17,16 +17,20 @@
     }
     
     html {
-      background: url('Image/3.jpg') center / cover no-repeat fixed !important;
-      min-height: 100vh !important;
-      height: 100% !important;
+      background: url('Image/3.jpg') center center / cover no-repeat !important;
+      position: fixed !important;
+      top: 0 !important;
+      left: 0 !important;
+      width: 100vw !important;
+      height: 100vh !important;
       overflow: hidden !important;
     }
     
     body {
       background: transparent !important;
-      min-height: 100vh !important;
-      height: 100% !important;
+      position: relative !important;
+      width: 100vw !important;
+      height: 100vh !important;
       overflow: hidden !important;
       margin: 0 !important;
       padding: 0 !important;
