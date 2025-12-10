@@ -10,6 +10,11 @@
   font-family: "Montserrat", sans-serif;
 }
 
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -19,6 +24,10 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+}
+
+.content {
+  flex: 1; /* occupe tout l'espace restant pour pousser le footer en bas */
 }
 
 /* ================== NAVBAR ================== */
