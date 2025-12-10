@@ -187,6 +187,15 @@ footer {
     display: block;
   }
   
+ .nav-links {
+    display: none;
+  }
+
+  .nav-links.active {
+    display: block;
+  }
+  
+  
   .navbar .nav-links {
     display: none;
     position: fixed;
