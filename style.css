@@ -62,7 +62,7 @@ body {
 }
 
 /* Responsive */
-@media screen and (max-width: 920px) {
+@media screen and (max-width: 800px x 400px) {
   .navbar {
     padding: 15px 20px;
   }
