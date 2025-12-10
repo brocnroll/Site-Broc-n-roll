@@ -20,8 +20,8 @@ body {
   flex-direction: column;
   min-height: 100vh;
   background-image: url('Image/3.jpg');
-  background-size: cover;
-  background-position: 50% -100px;
+  background-size: 90%;
+  background-position: 50% -300px;
   background-repeat: no-repeat;
   background-attachment: fixed;
   margin: auto auto 50px auto;
