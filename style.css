@@ -139,10 +139,8 @@ footer {
 
 /* Responsive */
 @media screen and (max-width: 920px) {
-  .menu-hamburger {
-    display: block;
-  }
-
+  .menu-hamburger {display: block; }
+  
   .nav-links {
     display: none;
     position: fixed;
