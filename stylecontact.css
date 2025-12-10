@@ -22,7 +22,7 @@ body {
   min-height: 100vh;      /* prend toute la hauteur de la fenêtre */
   background-image: url('Image/3.jpg'); /* chemin vers ton image */
   background-size: cover;       /* couvre tout l'écran */
-  background-position: bottom 20%;  /* centrée */
+  background-position: centre;  /* centrée */
   background-repeat: no-repeat; /* pas de répétition */
   background-attachment: fixed; /* reste fixe quand tu scrolles */
 }
