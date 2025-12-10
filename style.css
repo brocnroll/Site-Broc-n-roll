@@ -126,12 +126,14 @@ body {
 
 /* ================== EN-TÊTE CONTACT ================== */
 .contact-header {
+ width: 100%; /* prend toute la largeur de la page */
+  max-width: none; /* ignore la limite de 800px */
   background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
   color: white;
   padding: 40px 30px;
-  border-radius: 10px 10px 0 0;
-  margin: -20px -20px 0 -20px;
   text-align: center;
+  border-radius: 0; /* pas de coins arrondis si tu veux un rectangle complet */
+  margin: 0; /* pas de marge qui limite la largeur */
 }
 
 .contact-header h1 {
