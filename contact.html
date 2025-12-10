@@ -7,8 +7,9 @@
   <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
   <link rel="stylesheet" href="style.css"> 
 </head>
-<body class="page-contact">
+<body>
 
+  <!-- Navbar -->
   <nav class='navbar'>
     <a href="index.html" class="logo">Broc'n'roll</a>
     <div class="nav-links">
@@ -23,6 +24,7 @@
     <div class="menu-hamburger"><i class="fa fa-bars" style="color:white;"></i></div>
   </nav>
 
+  <!-- Formulaire -->
   <section class="page-contact">
     <h1>Contactez-nous</h1>
     <p>Remplissez le formulaire ci-dessous pour nous envoyer un message.</p>
@@ -49,10 +51,16 @@
     </form>
   </section>
 
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Broc'n'roll - Tous droits réservés</p>
+    <p>📍Châteauneuf-sur-Cher | 📞 06 XX XX XX XX | ✉ contact@brocnroll.fr</p>
+  </footer>
+
+  <!-- Scripts -->
   <script>
     const menuHamburger = document.querySelector(".menu-hamburger");
     const navLinks = document.querySelector(".nav-links");
-
     menuHamburger.addEventListener('click', () => {
       navLinks.classList.toggle('mobile-menu');
     });
@@ -63,7 +71,6 @@
 
     document.getElementById('form').addEventListener('submit', function(e) {
       e.preventDefault();
-
       emailjs.sendForm('service_3l08cr5', 'template_f8ap0hw', this)
         .then(function(response) {
           document.getElementById("confirmationMessage").innerHTML = "Merci, votre message a bien été envoyé !";
@@ -73,7 +80,3 @@
           document.getElementById("confirmationMessage").style.color = "red";
         });
     });
-  </script>
-
-</body>
-</html>
