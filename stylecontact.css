@@ -31,6 +31,10 @@ body {
   flex: 1;                  /* prend tout l'espace restant */
 }
 
+.page-contact {
+  padding-top: 150px; /* augmente la valeur pour descendre plus */
+}
+
 /* ================== NAVBAR ================== */
 .navbar {
   display: flex;
