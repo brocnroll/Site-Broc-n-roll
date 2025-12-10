@@ -24,6 +24,7 @@ body {
   background-position: top center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  margin: auto auto 50px auto;
 }
 
 .content {
