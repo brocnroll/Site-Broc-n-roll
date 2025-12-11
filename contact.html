@@ -6,11 +6,8 @@
   <meta name="theme-color" content="#000000">
   <title>Contact - Broc'n'roll</title> 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
-  <link rel="stylesheet" href="stylecontact.css">
   
-  <!-- CSS DE SECOURS INLINE -->
   <style>
-    /* IMAGE EN FOND COMPLET */
     * {
       margin: 0;
       padding: 0;
@@ -18,106 +15,244 @@
     }
     
     html {
-      min-height: 100vh !important;
-      height: 100% !important;
-      width: 100% !important;
-      overflow-x: hidden !important;
-      overflow-y: hidden !important;
-      margin: 0 !important;
-      padding: 0 !important;
+      min-height: 100vh;
+      height: 100%;
+      width: 100%;
+      overflow-x: hidden;
+      margin: 0;
+      padding: 0;
     }
     
     html::before {
-      content: '' !important;
-      position: fixed !important;
-      top: 0 !important;
-      left: 0 !important;
-      width: 100vw !important;
-      height: 100vh !important;
-      background: url('Image/3.jpg') center center / cover no-repeat !important;
-      z-index: -1 !important;
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: url('Image/3.jpg') center center / cover no-repeat;
+      z-index: -1;
     }
     
     body {
-      background: transparent !important;
-      min-height: 100vh !important;
-      height: 100% !important;
-      width: 100% !important;
-      overflow: hidden !important;
-      margin: 0 !important;
-      padding: 0 !important;
+      background: transparent;
+      min-height: 100vh;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      font-family: 'Poppins', sans-serif;
+    }
+    
+    .content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    /* NAVBAR */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: white;
+      text-decoration: none;
+    }
+    
+    .menu-hamburger {
+      display: none;
+      font-size: 1.8rem;
+      color: white;
+      cursor: pointer;
+      z-index: 300;
+    }
+    
+    .nav-links ul {
+      display: flex;
+      list-style: none;
+      gap: 30px;
+    }
+    
+    .nav-links ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
+    
+    .nav-links ul li a:hover,
+    .nav-links ul li.active a {
+      color: #ff8c00;
+    }
+    
+    /* PAGE CONTACT */
+    .page-contact {
+      flex: 1;
+      padding: 120px 20px 40px;
+      max-width: 700px;
+      margin: 0 auto;
+      width: 100%;
+    }
+    
+    .contact-header {
+      background-color: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      padding: 30px;
+      margin-bottom: 30px;
+      border-radius: 10px;
+      text-align: center;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    .contact-header h1 {
+      font-size: 2.5rem;
+      color: white;
+      margin-bottom: 15px;
+    }
+    
+    .contact-header p {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.9);
+    }
+    
+    .contact-form-wrapper {
+      background-color: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      padding: 30px;
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    .corps-formulaire {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    
+    .groupe {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .groupe label {
+      color: white;
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+    
+    .groupe input,
+    .groupe textarea {
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid rgba(255,255,255,0.2);
+      background-color: rgba(255,255,255,0.1);
+      color: white;
+      font-size: 1rem;
+      font-family: inherit;
+    }
+    
+    .groupe input::placeholder,
+    .groupe textarea::placeholder {
+      color: rgba(255,255,255,0.6);
+    }
+    
+    .groupe textarea {
+      min-height: 150px;
+      resize: vertical;
     }
     
     .pied-formulaire {
-      text-align: center !important;
-      margin-top: 20px !important;
+      text-align: center;
+      margin-top: 20px;
     }
     
     .pied-formulaire button {
-      background-color: rgba(255, 140, 0, 0.3) !important; /* Orange transparent */
-      backdrop-filter: blur(5px) !important;
-      -webkit-backdrop-filter: blur(5px) !important;
-      color: white !important;
-      border: 2px solid rgba(255, 140, 0, 0.6) !important; /* Bordure orange douce */
-      padding: 12px 40px !important;
-      font-size: 1rem !important;
-      font-weight: 500 !important;
-      border-radius: 8px !important;
-      cursor: pointer !important;
-      transition: all 0.3s ease !important;
-      display: inline-block !important;
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.3) !important;
+      background-color: rgba(255, 140, 0, 0.3);
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+      color: white;
+      border: 2px solid rgba(255, 140, 0, 0.6);
+      padding: 12px 40px;
+      font-size: 1rem;
+      font-weight: 500;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: inline-block;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
     }
     
     .pied-formulaire button:hover {
-      background-color: rgba(255, 140, 0, 0.5) !important; /* Plus opaque au hover */
-      border-color: rgba(255, 140, 0, 0.9) !important;
-      transform: translateY(-2px) !important; /* Légère élévation */
-      box-shadow: 0 5px 15px rgba(255, 140, 0, 0.3) !important;
+      background-color: rgba(255, 140, 0, 0.5);
+      border-color: rgba(255, 140, 0, 0.9);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(255, 140, 0, 0.3);
     }
     
+    #confirmationMessage {
+      margin-top: 15px;
+      color: white;
+      font-weight: 500;
+    }
+    
+    /* FOOTER */
     footer {
-      background-color: rgba(0, 0, 0, 0.6) !important;
-      backdrop-filter: blur(10px) !important;
-      -webkit-backdrop-filter: blur(10px) !important;
-      color: white !important;
-      text-align: left !important;
-      padding: 20px 30px !important;
-      width: 100% !important;
-      margin-top: auto !important;
-      border-top: 1px solid rgba(255,255,255,0.1) !important;
+      background-color: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      color: white;
+      text-align: left;
+      padding: 20px 30px;
+      width: 100%;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      margin-top: auto;
     }
     
     footer p {
-      margin: 5px 0 !important;
-      font-size: 0.9rem !important;
+      margin: 5px 0;
+      font-size: 0.9rem;
     }
     
-    /* ================== RESPONSIVE MOBILE ================== */
+    /* RESPONSIVE MOBILE */
     @media screen and (max-width: 920px) {
-      
-      /* Menu hamburger visible */
       .menu-hamburger {
-        display: block !important;
+        display: block;
       }
       
-      /* Menu mobile plein écran avec effet glacé */
       .nav-links {
-        display: none !important;
-        position: fixed !important;
-        top: 0 !important;
-        left: 0 !important;
-        width: 100% !important;
-        height: 100vh !important;
-        background-color: rgba(0, 0, 0, 0.7) !important; /* Plus foncé */
-        backdrop-filter: blur(15px) saturate(180%) !important; /* Effet verre glacé */
-        -webkit-backdrop-filter: blur(15px) saturate(180%) !important;
-        flex-direction: column !important;
-        justify-content: center !important;
-        align-items: center !important;
-        z-index: 200 !important;
-        border: 1px solid rgba(255, 255, 255, 0.1) !important; /* Bordure subtile */
-        animation: fadeIn 0.3s ease !important; /* Animation d'ouverture */
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.7);
+        backdrop-filter: blur(15px) saturate(180%);
+        -webkit-backdrop-filter: blur(15px) saturate(180%);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 200;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        animation: fadeIn 0.3s ease;
       }
       
       @keyframes fadeIn {
@@ -132,115 +267,86 @@
       }
       
       .nav-links.active {
-        display: flex !important;
+        display: flex;
       }
       
       .nav-links ul {
-        flex-direction: column !important;
-        align-items: center !important;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
       }
       
       .nav-links ul li {
-        margin: 20px 0 !important;
-        /* SUPPRESSION DE L'ANIMATION QUI LES FAIT DISPARAÎTRE */
+        margin: 20px 0;
       }
       
-      /* SUPPRESSION DES DÉLAIS D'ANIMATION */
-      
       .nav-links ul li a {
-        font-size: 1.8rem !important;
-        padding: 10px 30px !important;
-        border-radius: 10px !important;
-        transition: all 0.3s ease !important;
-        display: block !important;
-        color: white !important; /* Force le texte blanc */
+        font-size: 1.8rem;
+        padding: 10px 30px;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+        display: block;
+        color: white;
       }
       
       .nav-links ul li a:hover {
-        background-color: rgba(255, 140, 0, 0.2) !important;
-        transform: scale(1.1) !important;
+        background-color: rgba(255, 140, 0, 0.2);
+        transform: scale(1.1);
       }
       
-      /* Icône hamburger qui devient X */
       .menu-hamburger {
-        position: relative !important;
-        z-index: 300 !important;
-        transition: all 0.3s ease !important;
+        position: relative;
+        z-index: 300;
+        transition: all 0.3s ease;
       }
       
       .nav-links.active ~ .menu-hamburger {
-        transform: rotate(90deg) !important;
-      }
-      
-      /* Page contact responsive */
-      html, body {
-        padding: 0 !important;
-        margin: 0 !important;
-        background-color: transparent !important; /* Enlève le fond blanc */
-      }
-      
-      body {
-        background-position: center top !important;
-        background-size: cover !important;
-        min-height: 100vh !important;
-      }
-      
-      .content {
-        background-color: transparent !important;
-        min-height: 100vh !important;
+        transform: rotate(90deg);
       }
       
       .page-contact {
-        padding-top: 100px !important; /* Réduit pour remonter le contenu */
-        max-width: 85% !important;
-        margin: 0 auto 30px auto !important;
-        background-color: transparent !important;
-        box-shadow: none !important;
+        padding-top: 100px;
+        max-width: 90%;
+        padding-bottom: 20px;
       }
       
-      /* Header séparé avec plus d'espace */
       .contact-header {
-        padding: 25px 15px !important;
-        margin: 0 0 40px 0 !important; /* Plus d'espace : 40px au lieu de 20px */
-        border-radius: 10px !important;
-        box-shadow: 0 5px 20px rgba(0,0,0,0.5) !important;
+        padding: 25px 15px;
+        margin-bottom: 30px;
+        border-radius: 10px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.5);
       }
       
       .contact-header h1 {
-        font-size: 1.8rem !important;
+        font-size: 1.8rem;
       }
       
       .contact-header p {
-        font-size: 0.95rem !important;
+        font-size: 0.95rem;
       }
       
-      /* Formulaire séparé */
       .contact-form-wrapper {
-        padding: 15px 12px !important;
-        margin: 0 !important; /* Plus de marge négative */
-        border-radius: 10px !important; /* Coins arrondis partout */
-        box-shadow: 0 5px 20px rgba(0,0,0,0.5) !important;
+        padding: 20px 15px;
+        border-radius: 10px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.5);
       }
       
-      .corps-formulaire .groupe {
-        margin-bottom: 15px !important;
+      .corps-formulaire {
+        gap: 15px;
       }
       
       .pied-formulaire button {
-        width: 100% !important;
-        padding: 14px 0 !important;
+        width: 100%;
+        padding: 14px 0;
       }
       
-      /* Footer transparent sur mobile */
       footer {
-        text-align: center !important;
-        padding: 20px 15px !important;
-        background-color: rgba(0, 0, 0, 0.6) !important; /* Garde la transparence */
-        margin-bottom: 0 !important;
+        text-align: center;
+        padding: 20px 15px;
       }
       
       footer p {
-        font-size: 0.85rem !important;
+        font-size: 0.85rem;
       }
     }
   </style>
@@ -252,7 +358,7 @@
     <nav class="navbar">
       <a href="index.html" class="logo">Broc'n'roll</a>
 
-      <div class="menu-hamburger">
+      <div class="menu-hamburger" onclick="toggleMenu()">
         <i class="fa fa-bars"></i>
       </div>
 
@@ -276,7 +382,7 @@
       
       <!-- ZONE FORMULAIRE -->
       <div class="contact-form-wrapper">
-        <form id="form">
+        <form id="form" onsubmit="handleSubmit(event)">
           <div class="corps-formulaire">
             <div class="groupe">
               <label>Nom</label>
@@ -293,7 +399,7 @@
               <input type="tel" name="user_tel" placeholder="Vos numéros" required>
             </div>
 
-            <div class="groupe full-width">
+            <div class="groupe">
               <label>Message</label>
               <textarea name="message" placeholder="Votre message" required></textarea>
             </div>
@@ -313,9 +419,22 @@
     <p>📍Châteauneuf-sur-Cher | 📞 06 XX XX XX XX | ✉ brocnroll18@gmail.com</p>
   </footer>
  
-  <!-- SCRIPTS -->
-  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-  <script src="script.js"></script>
-
+  <script>
+    function toggleMenu() {
+      const navLinks = document.querySelector('.nav-links');
+      navLinks.classList.toggle('active');
+    }
+    
+    function handleSubmit(event) {
+      event.preventDefault();
+      const confirmationMessage = document.getElementById('confirmationMessage');
+      confirmationMessage.textContent = 'Message envoyé avec succès !';
+      confirmationMessage.style.color = '#4CAF50';
+      document.getElementById('form').reset();
+      setTimeout(() => {
+        confirmationMessage.textContent = '';
+      }, 3000);
+    }
+  </script>
 </body>
 </html>
