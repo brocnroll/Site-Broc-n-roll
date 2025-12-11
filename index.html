@@ -3,49 +3,640 @@
 <head>
   <meta charset="UTF-8">
   <title>Broc'n'roll</title>
-  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Questrial&display=swap');
+
+    /* ================== RESET ================== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      text-decoration: none;
+      list-style: none;
+      font-family: "Montserrat", sans-serif;
+    }
+
+    html {
+      min-height: 100vh;
+      width: 100%;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    html::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: url('Image/1.jpg') center center / cover no-repeat;
+      z-index: -1;
+    }
+
+    body {
+      background: transparent;
+      color: #333;
+      min-height: 100vh;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ================== NAVBAR ================== */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 100;
+      background-color: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .navbar .logo {
+      color: white;
+      font-size: 2em;
+      font-weight: bold;
+    }
+
+    .navbar .nav-links ul {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .navbar .nav-links ul li a {
+      color: white;
+      font-weight: 500;
+      font-size: 1.1rem;
+      transition: color 0.3s;
+    }
+
+    .navbar .nav-links ul li a:hover,
+    .navbar .nav-links ul li.active a {
+      color: #ff8c00;
+    }
+
+    .menu-hamburger {
+      display: none;
+      font-size: 1.8rem;
+      color: white;
+      cursor: pointer;
+      z-index: 300;
+    }
+
+    /* ================== HERO SECTION ================== */
+    .hero {
+      padding-top: 120px;
+      min-height: 60vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding-bottom: 60px;
+    }
+
+    .hero-content {
+      background-color: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      padding: 50px 40px;
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.1);
+      max-width: 800px;
+      margin: 0 20px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      color: white;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      color: rgba(255,255,255,0.9);
+      line-height: 1.6;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+    }
+
+    /* ================== SECTIONS IMAGE/TEXTE ================== */
+    .content-section {
+      padding: 80px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .image-text-section {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      margin-bottom: 80px;
+    }
+
+    .image-text-section.reverse {
+      flex-direction: row-reverse;
+    }
+
+    .image-container {
+      flex: 1;
+      position: relative;
+    }
+
+    .image-container img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+      border: 2px solid rgba(255, 140, 0, 0.3);
+    }
+
+    .text-container {
+      flex: 1;
+      background-color: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      padding: 40px;
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.1);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+    }
+
+    .text-container h2 {
+      font-size: 2.2rem;
+      color: white;
+      margin-bottom: 20px;
+      border-left: 4px solid #ff8c00;
+      padding-left: 20px;
+    }
+
+    .text-container p {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.9);
+      line-height: 1.8;
+      margin-bottom: 15px;
+    }
+
+    .cta-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 30px;
+      background-color: rgba(255, 140, 0, 0.3);
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+      color: white;
+      border: 2px solid rgba(255, 140, 0, 0.6);
+      border-radius: 8px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    }
+
+    .cta-button:hover {
+      background-color: rgba(255, 140, 0, 0.5);
+      border-color: rgba(255, 140, 0, 0.9);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(255, 140, 0, 0.3);
+    }
+
+    /* ================== CAROUSEL ================== */
+    .carousel-section {
+      padding: 80px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .carousel-header {
+      text-align: center;
+      margin-bottom: 50px;
+      background-color: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      padding: 30px;
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .carousel-header h2 {
+      font-size: 2.5rem;
+      color: white;
+      margin-bottom: 15px;
+    }
+
+    .carousel-header p {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.9);
+    }
+
+    .carousel-container {
+      position: relative;
+      background-color: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      padding: 40px;
+      border-radius: 20px;
+      border: 2px solid rgba(255, 140, 0, 0.3);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+    }
+
+    .carousel-wrapper {
+      overflow: hidden;
+      border-radius: 15px;
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+
+    .carousel-slide {
+      min-width: 100%;
+      position: relative;
+    }
+
+    .carousel-slide img {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+      border-radius: 15px;
+    }
+
+    .carousel-caption {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      right: 20px;
+      background-color: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      padding: 20px;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 140, 0, 0.5);
+    }
+
+    .carousel-caption h3 {
+      color: #ff8c00;
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    .carousel-caption p {
+      color: white;
+      font-size: 1rem;
+    }
+
+    .carousel-controls {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .carousel-btn {
+      background-color: rgba(255, 140, 0, 0.3);
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+      color: white;
+      border: 2px solid rgba(255, 140, 0, 0.6);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 1.2rem;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .carousel-btn:hover {
+      background-color: rgba(255, 140, 0, 0.5);
+      border-color: rgba(255, 140, 0, 0.9);
+      transform: scale(1.1);
+    }
+
+    .carousel-dots {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.3);
+      border: 2px solid rgba(255, 140, 0, 0.4);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .dot.active {
+      background-color: #ff8c00;
+      border-color: #ff8c00;
+      transform: scale(1.3);
+    }
+
+    /* ================== FOOTER ================== */
+    footer {
+      background-color: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      color: white;
+      text-align: left;
+      padding: 20px 30px;
+      width: 100%;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      margin-top: auto;
+    }
+
+    footer p {
+      margin: 5px 0;
+      font-size: 0.9rem;
+    }
+
+    /* ================== RESPONSIVE ================== */
+    @media screen and (max-width: 920px) {
+      .menu-hamburger {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.7);
+        backdrop-filter: blur(15px) saturate(180%);
+        -webkit-backdrop-filter: blur(15px) saturate(180%);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 200;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-links ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .nav-links ul li a {
+        font-size: 1.8rem;
+        padding: 10px 30px;
+      }
+
+      .hero {
+        padding-top: 100px;
+        min-height: 50vh;
+      }
+
+      .hero-content {
+        padding: 30px 20px;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 1.1rem;
+      }
+
+      .image-text-section,
+      .image-text-section.reverse {
+        flex-direction: column;
+        gap: 30px;
+        margin-bottom: 50px;
+      }
+
+      .image-container img {
+        height: 300px;
+      }
+
+      .text-container {
+        padding: 25px;
+      }
+
+      .text-container h2 {
+        font-size: 1.8rem;
+      }
+
+      .carousel-slide img {
+        height: 300px;
+      }
+
+      .carousel-container {
+        padding: 20px;
+      }
+
+      footer {
+        text-align: center;
+        padding: 20px 15px;
+      }
+
+      footer p {
+        font-size: 0.85rem;
+      }
+    }
+  </style>
 </head>
   
 <body>
-  
-  <nav class='navbar'>
-    <a href="index.html" class="logo">Broc'n'roll</a>
-    
-<div class="menu-hamburger">
-  <i class="fa fa-bars"></i>
-</div>
-    
-    <div class="nav-links">
-      <ul>
-        <li class="active"><a href="index.html">Accueil</a></li>
-        <li><a href="#">Nos prestations</a></li>
-        <li><a href="#">Nos boutiques</a></li> 
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-   </div>
-  </nav>
+  <div class="content">
+    <!-- NAVBAR -->
+    <nav class='navbar'>
+      <a href="index.html" class="logo">Broc'n'roll</a>
+      
+      <div class="menu-hamburger" onclick="toggleMenu()">
+        <i class="fa fa-bars"></i>
+      </div>
+      
+      <div class="nav-links">
+        <ul>
+          <li class="active"><a href="index.html">Accueil</a></li>
+          <li><a href="#">Nos prestations</a></li>
+          <li><a href="#">Nos boutiques</a></li> 
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
 
-  <section class="hero">
-    <h1>Bienvenue chez Broc'n'roll</h1>
-    <p>Découvrez nos boutiques, nos objets uniques et nos prestations sur mesure pour tous vos besoins.</p>
-  </section>
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Bienvenue chez Broc'n'roll</h1>
+        <p>Découvrez nos boutiques, nos objets uniques et nos prestations sur mesure pour tous vos besoins.</p>
+      </div>
+    </section>
 
+    <!-- SECTION 1 : IMAGE À GAUCHE, TEXTE À DROITE -->
+    <div class="content-section">
+      <div class="image-text-section">
+        <div class="image-container">
+          <img src="Image/1.jpg" alt="Nos objets vintage">
+        </div>
+        <div class="text-container">
+          <h2>Objets Vintage Uniques</h2>
+          <p>Plongez dans notre collection d'objets authentiques et rares. Chaque pièce a son histoire et apporte une touche unique à votre intérieur.</p>
+          <p>Des meubles anciens aux accessoires décoratifs, nous sélectionnons avec soin chaque article pour vous offrir le meilleur de la brocante.</p>
+          <a href="#" class="cta-button">Découvrir nos objets</a>
+        </div>
+      </div>
+
+      <!-- SECTION 2 : TEXTE À GAUCHE, IMAGE À DROITE -->
+      <div class="image-text-section reverse">
+        <div class="image-container">
+          <img src="Image/3.jpg" alt="Nos prestations">
+        </div>
+        <div class="text-container">
+          <h2>Prestations Sur Mesure</h2>
+          <p>Nous proposons des services personnalisés pour répondre à tous vos besoins : débarras, estimation, achat d'objets anciens et bien plus encore.</p>
+          <p>Notre équipe d'experts est à votre écoute pour vous accompagner dans tous vos projets.</p>
+          <a href="#" class="cta-button">Nos services</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- CAROUSEL SECTION -->
+    <section class="carousel-section">
+      <div class="carousel-header">
+        <h2>Notre Galerie</h2>
+        <p>Découvrez quelques-unes de nos plus belles trouvailles</p>
+      </div>
+
+      <div class="carousel-container">
+        <div class="carousel-wrapper">
+          <div class="carousel-track" id="carouselTrack">
+            <!-- Slide 1 -->
+            <div class="carousel-slide">
+              <img src="Image/1.jpg" alt="Collection 1">
+              <div class="carousel-caption">
+                <h3>Mobilier Ancien</h3>
+                <p>Des pièces authentiques pour votre intérieur</p>
+              </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="carousel-slide">
+              <img src="Image/3.jpg" alt="Collection 2">
+              <div class="carousel-caption">
+                <h3>Objets Décoratifs</h3>
+                <p>Accessoires vintage et rétro</p>
+              </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="carousel-slide">
+              <img src="Image/1.jpg" alt="Collection 3">
+              <div class="carousel-caption">
+                <h3>Vaisselle & Verrerie</h3>
+                <p>Pièces uniques pour votre table</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-controls">
+          <button class="carousel-btn" onclick="prevSlide()">
+            <i class="fa fa-chevron-left"></i>
+          </button>
+          <button class="carousel-btn" onclick="nextSlide()">
+            <i class="fa fa-chevron-right"></i>
+          </button>
+        </div>
+
+        <div class="carousel-dots" id="carouselDots"></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- FOOTER -->
   <footer>
     <p>&copy; 2025 Broc'n'roll - Tous droits réservés</p>
     <p>📍Châteauneuf-sur-Cher | 📞 06 XX XX XX XX | ✉ brocnroll18@gmail.com</p>
   </footer>
 
   <script>
-    const menuHamburger = document.querySelector(".menu-hamburger");
-    const navLinks = document.querySelector(".nav-links");
-    menuHamburger.addEventListener('click', () => {
+    // Menu hamburger
+    function toggleMenu() {
+      const navLinks = document.querySelector('.nav-links');
       navLinks.classList.toggle('active');
-    });
-  </script>
-  
-  <script src="script.js"></script>
+    }
 
+    // Carousel
+    let currentSlide = 0;
+    const track = document.getElementById('carouselTrack');
+    const slides = document.querySelectorAll('.carousel-slide');
+    const dotsContainer = document.getElementById('carouselDots');
+    const totalSlides = slides.length;
+
+    // Créer les dots
+    for (let i = 0; i < totalSlides; i++) {
+      const dot = document.createElement('div');
+      dot.className = 'dot';
+      if (i === 0) dot.classList.add('active');
+      dot.onclick = () => goToSlide(i);
+      dotsContainer.appendChild(dot);
+    }
+
+    function updateCarousel() {
+      track.style.transform = `translateX(-${currentSlide * 100}%)`;
+      
+      // Update dots
+      const dots = document.querySelectorAll('.dot');
+      dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentSlide);
+      });
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % totalSlides;
+      updateCarousel();
+    }
+
+    function prevSlide() {
+      currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+      updateCarousel();
+    }
+
+    function goToSlide(index) {
+      currentSlide = index;
+      updateCarousel();
+    }
+
+    // Auto-play carousel
+    setInterval(nextSlide, 5000);
+  </script>
 </body>
 </html>
