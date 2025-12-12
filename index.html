@@ -29,17 +29,21 @@
       margin: 0;
       padding: 0;
     }
+    
+html::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('Image/1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
 
-    html::before {
-      content: '';
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background: url('Image/1.jpg') center center / cover no-repeat fixed;
-      z-index: -1;
-    }
 
     body {
       background: transparent;
