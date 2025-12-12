@@ -524,7 +524,7 @@
           <h2>La boutique</h2>
           <p>Venez tous les premiers samedis du mois à Châteauneuf-sur-Cher et plongez dans notre collection d'objets authentiques.</p>
           <p>Des meubles anciens aux accessoires décoratifs, nous sélectionnons avec soin chaque article pour vous offrir le meilleur de la brocante.</p>
-          <a href="https://maps.apple.com/?address= 13 route de Levet Châteauneuf-sur-Cher,18190,France" class="cta-button">Nous trouver</a>
+          <a href="https://maps.apple.com/?address=20 route de Levet Châteauneuf-sur-Cher,18190,France" class="cta-button">Nous trouver</a>
         </div>
       </div>
 
@@ -605,6 +605,14 @@
       const navLinks = document.querySelector('.nav-links');
       navLinks.classList.toggle('active');
     }
+    
+    // Fermer le menu quand on clique sur un lien
+    document.querySelectorAll('.nav-links ul li a').forEach(link => {
+      link.addEventListener('click', () => {
+        const navLinks = document.querySelector('.nav-links');
+        navLinks.classList.remove('active');
+      });
+    });
 
     // Carousel
     let currentSlide = 0;
