@@ -5,6 +5,8 @@
   <title>Broc'n'roll</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#000000">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Questrial&display=swap');
@@ -24,6 +26,8 @@
       width: 100%;
       overflow-x: hidden;
       scroll-behavior: smooth;
+      margin: 0;
+      padding: 0;
     }
 
     html::before {
@@ -33,7 +37,7 @@
       left: 0;
       width: 100vw;
       height: 100vh;
-      background: url('Image/1.jpg') center center / cover no-repeat;
+      background: url('Image/1.jpg') center center / cover no-repeat fixed;
       z-index: -1;
     }
 
@@ -46,6 +50,14 @@
       padding: 0;
       display: flex;
       flex-direction: column;
+      overflow-x: hidden;
+    }
+    
+    @supports (padding: max(0px)) {
+      body {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
     }
 
     .content {
@@ -510,9 +522,9 @@
         </div>
         <div class="text-container">
           <h2>La boutique</h2>
-          <p>Venez tout les premiers samedies du mois à châteauneuf-sur-cher et plongez dans notre collection d'objets authentiques.</p>
+          <p>Venez tous les premiers samedis du mois à Châteauneuf-sur-Cher et plongez dans notre collection d'objets authentiques.</p>
           <p>Des meubles anciens aux accessoires décoratifs, nous sélectionnons avec soin chaque article pour vous offrir le meilleur de la brocante.</p>
-          <a href="#" class="cta-button">Découvrir nos objets</a>
+          <a href="https://maps.apple.com/?address= 13 route de Levet Châteauneuf-sur-Cher,18190,France" class="cta-button">Nous trouver</a>
         </div>
       </div>
 
