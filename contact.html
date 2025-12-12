@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="theme-color" content="#000000">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <title>Contact - Broc'n'roll</title> 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
   
@@ -23,7 +22,7 @@
       margin: 0;
       padding: 0;
       position: relative;
-
+    }
     
     @supports (padding: max(0px)) {
       html {
@@ -39,7 +38,7 @@
       left: 0;
       width: 100vw;
       height: 100vh;
-      background: url('Image/3.jpg') center center / cover no-repeat fixed;
+      background: url('Image/3.jpg') center center / cover no-repeat;
       z-index: -1;
     }
     
@@ -53,8 +52,7 @@
       flex-direction: column;
       font-family: 'Poppins', sans-serif;
       position: relative;
-      overflow-x: hidden;
-    
+    }
     
     @supports (padding: max(0px)) {
       body {
@@ -78,7 +76,7 @@
       background-color: rgba(0, 0, 0, 0.7);
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
-      padding: 20px 50px;
+      padding: 15px 30px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -87,7 +85,7 @@
     }
     
     .logo {
-      font-size: 2em;
+      font-size: 1.8rem;
       font-weight: bold;
       color: white;
       text-decoration: none;
@@ -111,7 +109,6 @@
       color: white;
       text-decoration: none;
       font-size: 1.1rem;
-      font-weight: 500;
       transition: color 0.3s ease;
     }
     
@@ -121,13 +118,7 @@
     }
     
     /* PAGE CONTACT */
-          
-      /* Fermer le menu quand on clique sur un lien */
-      .nav-links ul li a {
-        cursor: pointer;
-      }
-      
-      .page-contact {
+    .page-contact {
       flex: 1;
       padding: 120px 20px 40px;
       max-width: 700px;
@@ -343,6 +334,8 @@
       .nav-links.active ~ .menu-hamburger {
         transform: rotate(90deg);
       }
+      
+      .page-contact {
         padding-top: 100px;
         max-width: 90%;
         padding-bottom: 20px;
@@ -462,14 +455,6 @@
       const navLinks = document.querySelector('.nav-links');
       navLinks.classList.toggle('active');
     }
-    
-    // Fermer le menu quand on clique sur un lien
-    document.querySelectorAll('.nav-links ul li a').forEach(link => {
-      link.addEventListener('click', () => {
-        const navLinks = document.querySelector('.nav-links');
-        navLinks.classList.remove('active');
-      });
-    });
     
     function handleSubmit(event) {
       event.preventDefault();
